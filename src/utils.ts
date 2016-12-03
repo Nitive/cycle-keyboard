@@ -1,7 +1,5 @@
 import { names } from 'keycode';
 
-const localNames: string[] = names;
-
 export function getDisplayKey(ev: KeyboardEvent) {
   var key = '';
   if (ev.ctrlKey)
@@ -12,7 +10,7 @@ export function getDisplayKey(ev: KeyboardEvent) {
     key += key ? '+alt' : 'alt';
   var keyChar = ev.type == 'keypress'
     ? getDisplayChar(ev)
-    : localNames[ev.keyCode];
+    : names[ev.keyCode];
   if (ev.type == 'keydown'
     && (keyChar == 'ctrl' || keyChar == 'alt' || keyChar == 'shift'))
     return key;

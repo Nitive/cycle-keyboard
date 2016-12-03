@@ -1,5 +1,10 @@
 {
   "compilerOptions": {
+    "lib": [
+      "dom",
+      "es5",
+      "es2015.promise"
+    ],
     "removeComments": false,
     "preserveConstEnums": true,
     "sourceMap": true,
